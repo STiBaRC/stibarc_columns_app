@@ -67,7 +67,7 @@ var post = function () {
 			var n = new Date().getTime() + 15000;
 			window.localStorage.setItem("canpostagain", n);
 			var thing = new XMLHttpRequest();
-			thing.open("POST", "https://api.columns.stibarc.gq/postpost.sjs", false);
+			thing.open("POST", "http://api.columns.stibarc.gq/postpost.sjs", false);
 			thing.send("sess="+sess+"&title="+encodeURIComponent(title)+"&column="+column+"&content="+encodeURIComponent(content).replace(/%0A/g, "%0D%0A"));
 			location.href = "post.html?id=" + thing.responseText + "&column=" + column;
 			document.getElementById("content").value = "";
