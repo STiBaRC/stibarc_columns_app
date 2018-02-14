@@ -68,11 +68,11 @@ var getStuff = function (id) {
 	document.getElementById("name").innerHTML = "Real name: ".concat(name);
 	document.getElementById("email").innerHTML = "Email: ".concat(email);
 	document.getElementById("bday").innerHTML = "Birthday: ".concat(birthday);
-	posts = posts.split(",");
+	/*posts = posts.split(",");
 	document.getElementById("posts").innerHTML = "";
 	for (i = 0; i < posts.length; i++) {
         toLink(posts[i]);
-    }
+    }*/
 }
 
 window.onload = function () {
