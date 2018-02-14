@@ -1,2 +1,14 @@
-# stibarc_columns_app
-The mobile app for STiBaRC|Columns
+# A Blank PhoneGap App
+
+## Usage
+
+### PhoneGap CLI
+
+    $ phonegap create my-app --template blank
+
+### Desktop
+
+In your browser, open the file:
+
+    /www/index.html
+
