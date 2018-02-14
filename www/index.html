@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>STiBaRC|Columns</title>
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" />
+<meta http-equiv="Content-Security-Policy" content="default-src *; style-src *  'unsafe-inline'; 'unsafe-eval'; script-src *  'unsafe-inline';'unsafe-eval'; media-src *">
+<meta http-equiv="X-XSS-Protection" content="0">
+<!--link href="css/default.css" rel="stylesheet"-->
+<link rel="icon" type="image/png" href="icon.png">
+<!--Apple Crap-->
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="apple-mobile-web-app-title" content="STiBaRC">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<script type="text/javascript">
+
+if(("standalone" in window.navigator) && window.navigator.standalone){
+
+var noddy, remotes = false;
+
+document.addEventListener('click', function(event) {
+
+noddy = event.target;
+
+while(noddy.nodeName !== "A" && noddy.nodeName !== "HTML") {
+noddy = noddy.parentNode;
+}
+
+if('href' in noddy && noddy.href.indexOf('http') !== -1 && (noddy.href.indexOf(document.location.host) !== -1 || remotes))
+{
+event.preventDefault();
+document.location.href = noddy.href;
+}
+
+},false);
+}
+</script>
+<!--End Apple Crap-->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-title" content="STiBaRC">
+<style>
+body {
+    overflow-y: scroll;
+    background-color: #98DFF3;
+    word-wrap: break-word;
+}
+#mainblobshitwithlist {
+    background-color: #FFFFFF;
+    word-wrap: break-word;
+}
+
+#header {
+    text-align: center;
+    background-color: #49B9CA;
+    word-wrap: break-word;
+}
+
+footer {
+    background-color: #49B9CA;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+a:link {
+    color: #000000;
+}
+
+a:visited {
+    color: #000000;
+}
+
+a:hover {
+    color: #000000;
+}
+
+a:active {
+    color: #000000;
+}
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+button {
+    width: 100%;
+}
+</style>
+<script src="js/main.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="cordova.js"></script>
+<br/>
+<div id="header">
+<div id="loggedout">
+<a href="login.html">Login</a> - <a href="register.html">Register</a> - <!--a href="search.sjs"--><s>Search</s><!--/a-->
+</div>
+<div id="loggedin" style="display:none">
+<a href="newpost.html">New post</a> - <!--a href="editprofile.html"--><s>Edit profile</s><!--/a--> - <!--a href="search.sjs"--><s>Search</s><!--/a-->
+</div>
+</div><br/>
+<div id="columnsbar">
+<table width="100%">
+<tr>
+<td id="1"><button id="1" onclick="changecolumn(1)">1</button></td><td id="2"><button id="2" onclick="changecolumn(2)">2</button></td><td id="3"><button id="3" onclick="changecolumn(3)">3</button></td><td id="4"><button id="4" onclick="changecolumn(4)">4</button></td><td id="5"><button id="5" onclick="changecolumn(5)">5</button></td><td id="6"><button id="6" onclick="changecolumn(6)">6</button></td><td id="7"><button id="7" onclick="changecolumn(7)">7</button></td><td id="8"><button id="8" onclick="changecolumn(8)">8</button></td><td id="9"><button id="9" onclick="changecolumn(9)">9</button></td><td id="10"><button id="10" onclick="changecolumn(10)">10</button></td>
+</tr>
+</table>
+</div>
+<div id="mainblobshitwithlist">
+Recent posts:
+<ul id="shitlist">
+<li>Loading...</li>
+</ul>
+</div>
+<br/>
+<footer>
+<div id="footerout"><a href="index.html">Home</a><br /></div>
+<div id="footerin" style="display:none"><a href="index.html">Home</a> - <a href="logout.html">Logout</a><br /></div>
+Notice: this is intended to be a clone of Reddit, made just for fun and as a tribute to my friend Andrew.<br/>
+Icon by Alex Savon<br/>
+&copy; 2018 STiBaRC
+</footer>
+</body>
+</html>
